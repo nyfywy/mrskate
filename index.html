@@ -56,7 +56,8 @@
         document.getElementById("totalSeconds").innerHTML = "To w sumie: " + totalSeconds + " sekund";
     }, 1000); // Aktualizuj co 1000 milisekund (1 sekunda)
 </script>
-</div><em>i za każdą z tych sekund Ci dziękuję&nbsp;🌹</em><div><img id="randomImage" alt="Random Image">
+</div><em>i za każdą z tych sekund Ci dziękuję&nbsp;🌹</em><div>
+    <img id="randomImage" alt="Random Image">
 
 <!-- Guzik jako obraz -->
 <img src="guzik.png" alt="Show Random Image" onclick="showRandomImage()" style="cursor: pointer; height: 20%; width: 20%;">
@@ -91,6 +92,7 @@
     <style>
         #randomImage {
             display: none; /* Początkowo ukryj obraz */
+            width: 100%;
         }
     </style>
 </body>
