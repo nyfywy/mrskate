@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+</head>
+
+<body id="page-top" style="background-image:url('assets/img/bg-masthead.jpg'); background-repeat: repeat;"><a class="menu-toggle rounded" href="#"><i class="fa fa-bars"></i></a>
+    <nav class="navbar navbar-expand navbar-light" id="sidebar-wrapper">
+        <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler d-none" data-bs-target="#"></button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav sidebar-nav" id="sidebar-nav">
+                    <li class="nav-item sidebar-brand"><a class="nav-link active js-scroll-trigger" href="#page-top">Brand</a></li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#page-top">Home</a></li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="d-flex masthead" style="background-color: aliceblue;">
+        <div class="container my-auto text-center">
+            <h1 class="mb-1">Hej kochanie!&nbsp;💕</h1>
+            <h3 class="mb-5"><div>
+<div id="countup"></div>
+<div id="totalSeconds"></div>
+<script>
+    // Ustaw datę i godzinę początkową
+    var startDate = new Date("February 8, 2024 20:00:00").getTime();
+
+    // Funkcja odmierzająca czas
+    var countupFunction = setInterval(function() {
+        // Aktualna data i godzina
+        var currentDate = new Date().getTime();
+
+        // Różnica między obecną datą a datą początkową
+        var timeDifference = currentDate - startDate;
+
+        // Obliczanie upływającego czasu w dniach, godzinach, minutach i sekundach
+        var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        // Wyświetlanie odmierzonego czasu na stronie
+        document.getElementById("countup").innerHTML = "Od " + new Date(startDate).toLocaleString() + " minęło: " + days + " dni, " + hours + " godzin, " + minutes + " minut, " + seconds + " sekund";
+        var totalSeconds = Math.floor(timeDifference / 1000);
+        document.getElementById("totalSeconds").innerHTML = "To w sumie: " + totalSeconds + " sekund";
+    }, 1000); // Aktualizuj co 1000 milisekund (1 sekunda)
+</script>
+</div><em>i za każdą z tych sekund Ci dziękuję&nbsp;🌹</em><div><img id="randomImage" alt="Random Image">
+
+<!-- Guzik jako obraz -->
+<img src="guzik.png" alt="Show Random Image" onclick="showRandomImage()" style="cursor: pointer; height: 20%; width: 20%;">
+
+<script>
+    function showRandomImage() {
+        // Generuj losowy numer od 1 do 6 (ilość dostępnych zdjęć)
+        var randomNumber = Math.floor(Math.random() * 6) + 1;
+
+        // Utwórz ścieżkę do losowego zdjęcia
+        var imagePath = randomNumber + ".jpg";
+        document.getElementById("randomImage").style.display = "block";
+        // Ustaw src atrybut obrazu na losową ścieżkę
+        document.getElementById("randomImage").src = imagePath;
+    }
+</script></div></h3>
+            <div class="overlay"></div>
+        </div>
+    </header>
+    <footer class="footer text-center">
+        <div class="container">
+            <ul class="list-inline mb-5">
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-facebook"></i></a></li>
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-twitter"></i></a></li>
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-github"></i></a></li>
+            </ul>
+            <p class="text-muted mb-0 small">Copyright &nbsp;© Mrskate tattoo 2024</p>
+        </div><a class="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i class="fa fa-angle-up"></i></a>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/stylish-portfolio.js"></script>
+    <style>
+        #randomImage {
+            display: none; /* Początkowo ukryj obraz */
+        }
+    </style>
+</body>
+
+</html>
