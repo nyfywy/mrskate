@@ -28,35 +28,7 @@
     </nav>
     <header class="d-flex masthead" style="background-color: aliceblue;">
         <div class="container my-auto text-center">
-            <h1 class="mb-1">Hej kochanie!&nbsp;💕</h1>
-            <h3 class="mb-5"><div>
-<div id="countup"></div>
-<div id="totalSeconds"></div>
-<script>
-    // Ustaw datę i godzinę początkową
-    var startDate = new Date("February 8, 2024 20:00:00").getTime();
-
-    // Funkcja odmierzająca czas
-    var countupFunction = setInterval(function() {
-        // Aktualna data i godzina
-        var currentDate = new Date().getTime();
-
-        // Różnica między obecną datą a datą początkową
-        var timeDifference = currentDate - startDate;
-
-        // Obliczanie upływającego czasu w dniach, godzinach, minutach i sekundach
-        var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-        // Wyświetlanie odmierzonego czasu na stronie
-        document.getElementById("countup").innerHTML = "Od " + new Date(startDate).toLocaleString() + " minęło: " + days + " dni, " + hours + " godzin, " + minutes + " minut, " + seconds + " sekund";
-        var totalSeconds = Math.floor(timeDifference / 1000);
-        document.getElementById("totalSeconds").innerHTML = "To w sumie: " + totalSeconds + " sekund";
-    }, 1000); // Aktualizuj co 1000 milisekund (1 sekunda)
-</script>
-</div><em>i za każdą z tych sekund Ci dziękuję&nbsp;🌹</em><div>
+            
     <img id="randomImage" alt="Random Image">
 
 <!-- Guzik jako obraz -->
